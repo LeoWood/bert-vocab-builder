@@ -35,14 +35,14 @@ import tokenizer
 
 import tensorflow as tf
 
-tf.flags.DEFINE_string('output_filename', '/tmp/my.subword_text_encoder',
+tf.flags.DEFINE_string('output_filename', 'cscd_r_vocab.txt',
                        'where to store the SubwordTextEncoder')
-tf.flags.DEFINE_string('corpus_filepattern', '',
+tf.flags.DEFINE_string('corpus_filepattern', r'E:\LiuHuan\Projects\UER-py\corpora\R_seg.txt',
                        'Corpus of one or more text files')
 tf.flags.DEFINE_string('vocab_filepattern', '', 'One or more vocabulary files '
                        '(one word per line as "word,count")')
-tf.flags.DEFINE_integer('min_count', 5, 'Minimum subtoken count in corpus')
-tf.flags.DEFINE_integer('corpus_max_lines', None,
+tf.flags.DEFINE_integer('min_count', 200, 'Minimum subtoken count in corpus')
+tf.flags.DEFINE_integer('corpus_max_lines', 5000000,
                         'How many lines of corpus to read')
 tf.flags.DEFINE_integer('num_iterations', 5, 'Number of iterations')
 tf.flags.DEFINE_bool('split_on_newlines', True, 'Break corpus into lines.')
